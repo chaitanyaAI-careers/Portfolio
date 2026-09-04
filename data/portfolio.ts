@@ -13,7 +13,7 @@ export const portfolio = {
   name: "Chaitanya Sai",
   headline: "Applied AI Engineer",
   positioning:
-    "Generative AI · RAG · Agentic AI · AI Platform Engineering · System Design",
+    "Generative AI · RAG · Agentic AI · AI Platform Engineering",
   location: "Milwaukee, WI · Open to Remote & Relocation",
   email: "chaitanya.careerpaths@gmail.com",
   intro:
@@ -22,7 +22,6 @@ export const portfolio = {
   links: {
     github: "https://github.com/chaitanyaAI-careers",
     linkedin: "https://www.linkedin.com/in/chaitanyaai-careers/",
-    huggingface: "https://huggingface.co/chaitanyaAI-careers",
     email: "mailto:chaitanya.careerpaths@gmail.com",
   },
   focus: [
@@ -35,8 +34,8 @@ export const portfolio = {
       text: "Orchestration, policy gates, tool integration, workflow state, auditability, model routing, and operational controls.",
     },
     {
-      title: "System Design",
-      text: "API boundaries, data flows, persistence, reliability, authorization, event-driven workflows, observability, and deployment architecture.",
+      title: "Architecture & Reliability",
+      text: "Service boundaries, data flows, persistence, authorization, workflow reliability, observability, and deployment architecture.",
     },
     {
       title: "Backend Engineering",
@@ -157,7 +156,6 @@ export const portfolio = {
     "REST APIs",
     "PostgreSQL",
     "Docker",
-    "System Design",
     "AI Governance",
     "Observability",
   ],

@@ -89,7 +89,7 @@ export default function Home() {
             <strong>Code · Tests · Architecture</strong>
           </div>
 
-          <div className="mini-architecture" aria-label="Simplified system design flow">
+          <div className="mini-architecture" aria-label="Simplified engineering architecture flow">
             <span>User / Product</span>
             <b>↓</b>
             <span>AI + Application Layer</span>
@@ -192,7 +192,7 @@ export default function Home() {
 
       <footer className="footer shell">
         <span>© 2026 {portfolio.name}</span>
-        <span>Applied AI · RAG · Agentic AI · System Design</span>
+        <span>Applied AI · RAG · Agentic AI · AI Platform Engineering</span>
       </footer>
     </main>
   );

@@ -1,6 +1,6 @@
 # Chaitanya Sai — Applied AI Engineering Portfolio
 
-Recruiter-facing portfolio for **Applied AI Engineering, Generative AI, RAG, Agentic AI, AI Platform Engineering, backend systems, and system design**.
+Recruiter-facing portfolio for **Applied AI Engineering, Generative AI, RAG, Agentic AI, AI Platform Engineering, backend systems, architecture, and reliability**.
 
 ## Stack
 
@@ -76,6 +76,6 @@ in Vercel project environment variables.
 - recruiter-first
 - evidence over buzzwords
 - no unverified implementation claims
-- system design made explicit
+- architecture and engineering depth demonstrated through project evidence
 - social identity synchronized with `chaitanyaAI-careers`
 - architecture visuals can be added later without redesigning the site

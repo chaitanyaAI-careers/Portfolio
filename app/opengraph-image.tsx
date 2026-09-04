@@ -31,7 +31,7 @@ export default function OpenGraphImage() {
           Generative AI · RAG · Agentic AI · AI Platform Engineering
         </div>
         <div style={{ display: "flex", fontSize: 24, color: "#8da3bd", marginTop: 28 }}>
-          System Design · Backend Engineering · Evaluation · Governance
+          Backend Engineering · Evaluation · Governance · Reliability
         </div>
       </div>
     ),
