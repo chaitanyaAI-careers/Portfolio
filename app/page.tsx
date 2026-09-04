@@ -159,8 +159,24 @@ export default function Home() {
           eyebrow="Technical surface"
           title="Built across AI, backend, product and systems."
         />
-        <div className="stack-cloud">
-          {portfolio.skills.map((skill) => <span key={skill}>{skill}</span>)}
+        <div className="stack-groups">
+          <div>
+            <p className="stack-label">Publicly evidenced across the portfolio</p>
+            <div className="stack-cloud">
+              {portfolio.skills.publicEvidence.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="stack-label">Broader engineering experience & platform direction</p>
+            <div className="stack-cloud">
+              {portfolio.skills.broaderDirection.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

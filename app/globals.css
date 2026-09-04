@@ -633,3 +633,17 @@ main {
     padding: 24px 0;
   }
 }
+
+.stack-groups {
+  display: grid;
+  gap: 28px;
+}
+
+.stack-label {
+  margin: 0 0 12px;
+  color: #7f93ac;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
