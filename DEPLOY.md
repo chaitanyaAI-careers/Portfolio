@@ -62,7 +62,6 @@ Verify:
 - mobile layout
 - all six GitHub links
 - LinkedIn
-- Hugging Face
 - email
 - Open Graph image
 - `/robots.txt`
