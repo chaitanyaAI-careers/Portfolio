@@ -13,7 +13,7 @@ export const portfolio = {
   name: "Chaitanya Sai",
   headline: "Applied AI Engineer",
   positioning:
-    "Generative AI · RAG · Agentic AI · AI Platform Engineering",
+    "Generative AI · LLMs · RAG · Agentic AI · AI Platform & Backend Engineering",
   location: "Milwaukee, WI · Open to Remote & Relocation",
   email: "chaitanya.careerpaths@gmail.com",
   intro:

@@ -1,6 +1,6 @@
 # Chaitanya Sai — Applied AI Engineering Portfolio
 
-Recruiter-facing portfolio for **Applied AI Engineering, Generative AI, RAG, Agentic AI, AI Platform Engineering, backend systems, architecture, and reliability**.
+Recruiter-facing portfolio for **Applied AI Engineering, Generative AI, LLMs, RAG, Agentic AI, AI Platform & Backend Engineering, architecture, and reliability**.
 
 ## Stack
 

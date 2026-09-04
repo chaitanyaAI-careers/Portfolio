@@ -10,20 +10,22 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Chaitanya Sai | Applied AI Engineer",
   description:
-    "Applied AI engineering portfolio focused on Generative AI, RAG, Agentic AI, AI Platform Engineering, backend engineering and reliable AI systems.",
+    "Applied AI engineering portfolio focused on Generative AI, LLMs, RAG, Agentic AI, AI Platform Engineering, backend engineering and reliable AI systems.",
   keywords: [
     "Applied AI Engineer",
     "Generative AI Engineer",
+    "LLM Engineer",
     "RAG",
     "Agentic AI",
     "AI Platform Engineering",
+    "AI Backend Engineer",
     "FastAPI",
     "Python",
   ],
   openGraph: {
     title: "Chaitanya Sai | Applied AI Engineer",
     description:
-      "Generative AI · RAG · Agentic AI · AI Platform Engineering",
+      "Generative AI · LLMs · RAG · Agentic AI · AI Platform & Backend Engineering",
     type: "website",
     url: siteUrl,
     siteName: "Chaitanya Sai — Applied AI Engineering Portfolio",
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chaitanya Sai | Applied AI Engineer",
     description:
-      "Generative AI · RAG · Agentic AI · AI Platform Engineering",
+      "Generative AI · LLMs · RAG · Agentic AI · AI Platform & Backend Engineering",
     images: ["/opengraph-image"],
   },
 };

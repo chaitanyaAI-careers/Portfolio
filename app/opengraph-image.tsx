@@ -28,10 +28,10 @@ export default function OpenGraphImage() {
           Chaitanya Sai
         </div>
         <div style={{ display: "flex", fontSize: 34, color: "#d9e4f4", marginTop: 16 }}>
-          Generative AI · RAG · Agentic AI · AI Platform Engineering
+          Generative AI · LLMs · RAG · Agentic AI
         </div>
         <div style={{ display: "flex", fontSize: 24, color: "#8da3bd", marginTop: 28 }}>
-          Backend Engineering · Evaluation · Governance · Reliability
+          AI Platform · Backend Engineering · Evaluation · Governance
         </div>
       </div>
     ),
