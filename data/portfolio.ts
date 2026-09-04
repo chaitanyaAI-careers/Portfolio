@@ -14,7 +14,7 @@ export const portfolio = {
   headline: "Applied AI Engineer",
   positioning:
     "Generative AI · LLMs · RAG · Agentic AI · AI Platform & Backend Engineering",
-  location: "Milwaukee, WI · Open to Remote & Relocation",
+  location: "Texas, USA · Open to Remote & Relocation",
   email: "chaitanya.careerpaths@gmail.com",
   intro:
     "I build applied AI systems that connect model intelligence with production engineering: retrieval, agent orchestration, governed execution, APIs, evaluation, backend architecture, and reliability.",
