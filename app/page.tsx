@@ -21,38 +21,6 @@ function SectionTitle({
 }
 
 
-function EvidenceGroup({
-  status,
-  title,
-  items,
-}: {
-  status: "public" | "private" | "in-progress" | "planned";
-  title: string;
-  items: string[];
-}) {
-  const symbols = {
-    public: "●",
-    private: "◆",
-    "in-progress": "◐",
-    planned: "○",
-  };
-
-  return (
-    <div className={`evidence-group evidence-${status}`}>
-      <div className="evidence-group-title">
-        <span aria-hidden="true">{symbols[status]}</span>
-        <strong>{title}</strong>
-      </div>
-
-      <ul>
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 function FlagshipCaseStudy({
   project,
   number,
@@ -92,37 +60,27 @@ function FlagshipCaseStudy({
           ) : null}
         </div>
 
-        {project.caseStudy ? (
-          <div className="architecture-preview" aria-label={`${project.name} architecture overview`}>
-            <span className="architecture-label">Architecture</span>
 
-            <div className="architecture-flow">
-              {project.caseStudy.architecture.map((step, index) => (
-                <div className="architecture-step-wrap" key={step}>
-                  <div className="architecture-step">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{step}</strong>
-                  </div>
-
-                  {index < project.caseStudy!.architecture.length - 1 ? (
-                    <b aria-hidden="true">↓</b>
-                  ) : null}
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : null}
       </div>
 
-      <div className="flagship-evidence">
-        {project.evidence.map((group) => (
-          <EvidenceGroup
-            key={`${project.name}-${group.status}-${group.title}`}
-            status={group.status}
-            title={group.title}
-            items={group.items}
-          />
-        ))}
+      <div className="flagship-architecture">
+        <div className="flagship-architecture-heading">
+          <div>
+            <span>Architecture overview</span>
+            <strong>{project.name}</strong>
+          </div>
+
+          <small>Evidence status is encoded directly in the diagram.</small>
+        </div>
+
+        <img
+          src={
+            project.name === "Agentic AI Platform"
+              ? "/architecture/agentic-ai-platform.svg"
+              : "/architecture/pharma-ai-platform.svg"
+          }
+          alt={`${project.name} architecture diagram showing public, private, in-progress, and planned capabilities`}
+        />
       </div>
 
       {project.caseStudy ? (

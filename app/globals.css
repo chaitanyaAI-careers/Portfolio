@@ -1451,3 +1451,80 @@ main::before {
     margin-top: 72px;
   }
 }
+
+/* Portfolio V2 — real flagship architecture diagrams */
+
+.flagship-body {
+  grid-template-columns: 1fr;
+}
+
+.flagship-copy {
+  max-width: 820px;
+}
+
+.flagship-architecture {
+  margin-top: 34px;
+  padding: 14px;
+  border: 1px solid rgba(118, 184, 255, .13);
+  border-radius: 18px;
+  background: rgba(5, 9, 16, .48);
+  overflow: hidden;
+}
+
+.flagship-architecture-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  padding: 5px 7px 15px;
+}
+
+.flagship-architecture-heading > div {
+  display: grid;
+  gap: 4px;
+}
+
+.flagship-architecture-heading span {
+  color: #69819f;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.flagship-architecture-heading strong {
+  color: #c9d8e8;
+  font-size: .82rem;
+}
+
+.flagship-architecture-heading small {
+  color: #687d96;
+  font-size: .67rem;
+}
+
+.flagship-architecture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .flagship-architecture {
+    margin-inline: -8px;
+    padding: 8px;
+  }
+
+  .flagship-architecture-heading {
+    display: grid;
+    gap: 8px;
+  }
+
+  .flagship-architecture img {
+    min-width: 760px;
+  }
+
+  .flagship-architecture {
+    overflow-x: auto;
+  }
+}
