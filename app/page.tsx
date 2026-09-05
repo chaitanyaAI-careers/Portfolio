@@ -26,42 +26,54 @@ export default function Home() {
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
 
-      <nav className="nav shell" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Chaitanya Sai home">
-          <span className="brand-mark">CS</span>
-          <span className="brand-copy">
-            <strong>Chaitanya Sai</strong>
-            <small>Applied AI Engineer</small>
-          </span>
-        </a>
+      <header className="site-nav">
+        <nav className="nav shell" aria-label="Primary navigation">
+          <a className="brand" href="#top" aria-label="Chaitanya Sai home">
+            <span className="brand-mark">CS</span>
+            <span className="brand-copy">
+              <strong>Chaitanya Sai</strong>
+              <small>Applied AI Engineer</small>
+            </span>
+          </a>
 
-        <div className="nav-links">
-          <a href="#work">Work</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#stack">Stack</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+          <div className="nav-links">
+            <a href="#work">Work</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </header>
 
       <section id="top" className="hero shell">
         <div className="hero-copy">
-          <p className="availability"><span /> Open to full-time Applied AI / Generative AI / AI Platform roles</p>
-          <p className="eyebrow">Applied AI Engineering</p>
+          <p className="availability">
+            <span />
+            Open to full-time Applied AI · Generative AI · AI Platform roles
+          </p>
+
+          <p className="eyebrow">Applied AI Engineer</p>
+
           <h1>
             Building AI systems that are
             <span> useful, governed, and engineered to hold up.</span>
           </h1>
+
           <p className="hero-lede">{portfolio.intro}</p>
           <p className="positioning">{portfolio.positioning}</p>
 
           <div className="hero-actions">
-            <a className="button button-primary" href="#work">Explore selected work</a>
-            <a className="button button-secondary" href={portfolio.links.github} target="_blank" rel="noreferrer">
-              <GitHubIcon />
-              GitHub
+            <a className="button button-primary" href="#work">
+              View selected work
             </a>
+
             {portfolio.resumeUrl ? (
-              <a className="button button-secondary" href={portfolio.resumeUrl} target="_blank" rel="noreferrer">
+              <a
+                className="button button-secondary"
+                href={portfolio.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Resume
                 <ExternalIcon />
               </a>
@@ -69,36 +81,86 @@ export default function Home() {
           </div>
 
           <SocialLinks />
+
+          <div className="hero-meta" aria-label="Location and work preference">
+            <span>Texas, USA</span>
+            <i />
+            <span>Open to Remote & Relocation</span>
+          </div>
         </div>
 
-        <aside className="hero-panel" aria-label="Engineering profile summary">
-          <div className="signal-row">
-            <span className="signal-label">Primary</span>
-            <strong>Applied AI Engineer</strong>
-          </div>
-          <div className="signal-row">
-            <span className="signal-label">Focus</span>
-            <strong>GenAI · RAG · Agents</strong>
-          </div>
-          <div className="signal-row">
-            <span className="signal-label">Engineering</span>
-            <strong>Platforms · APIs · Systems</strong>
-          </div>
-          <div className="signal-row">
-            <span className="signal-label">Evidence</span>
-            <strong>Code · Tests · Architecture</strong>
+        <aside className="hero-panel profile-panel" aria-label="Engineering profile">
+          <p className="profile-kicker">Engineering profile</p>
+
+          <div className="profile-heading">
+            <span className="profile-mark">AI</span>
+
+            <div>
+              <strong>{portfolio.headline}</strong>
+              <small>Applied systems · governed AI · backend engineering</small>
+            </div>
           </div>
 
-          <div className="mini-architecture" aria-label="Simplified engineering architecture flow">
-            <span>User / Product</span>
-            <b>↓</b>
-            <span>AI + Application Layer</span>
-            <b>↓</b>
-            <span>Services / Governance</span>
-            <b>↓</b>
-            <span>Data · Tools · Runtime</span>
+          <div className="profile-signals">
+            <div className="signal-row">
+              <span className="signal-label">Primary</span>
+              <strong>Applied AI</strong>
+            </div>
+
+            <div className="signal-row">
+              <span className="signal-label">Focus</span>
+              <strong>GenAI · RAG · Agents</strong>
+            </div>
+
+            <div className="signal-row">
+              <span className="signal-label">Engineering</span>
+              <strong>AI Platforms · APIs · Backend</strong>
+            </div>
+
+            <div className="signal-row">
+              <span className="signal-label">Evidence</span>
+              <strong>Code · Tests · CI · Evaluation</strong>
+            </div>
+          </div>
+
+          <div className="profile-proof">
+            <span>AI Systems</span>
+            <span>Governance</span>
+            <span>Reliability</span>
           </div>
         </aside>
+      </section>
+
+      <section className="evidence-intro shell" aria-labelledby="evidence-model-title">
+        <div className="evidence-intro-heading">
+          <div>
+            <p className="eyebrow">Evidence model</p>
+            <h2 id="evidence-model-title">How to read this portfolio.</h2>
+          </div>
+
+          <p>
+            Public implementation, broader private work, active development,
+            and roadmap direction stay explicitly separated.
+          </p>
+        </div>
+
+        <div className="status-legend-grid">
+          {portfolio.statusLegend.map((item) => (
+            <article
+              className={`legend-card legend-${item.status}`}
+              key={item.status}
+            >
+              <div className="legend-topline">
+                <span className="legend-symbol" aria-hidden="true">
+                  {item.symbol}
+                </span>
+                <strong>{item.title}</strong>
+              </div>
+
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="architecture" className="section shell">
