@@ -21,6 +21,39 @@ function SectionTitle({
 }
 
 
+
+function ProjectMark({
+  name,
+  compact = false,
+}: {
+  name: string;
+  compact?: boolean;
+}) {
+  const identities: Record<string, { mark: string; id: string }> = {
+    "Agentic AI Platform": { mark: "A", id: "agentic" },
+    "Pharma AI Platform": { mark: "P", id: "pharma" },
+    "Job Copilot": { mark: "J", id: "job" },
+    "HR AI Content System": { mark: "HR", id: "hr" },
+    "Medicine Verification Platform": { mark: "M", id: "medicine" },
+    "Nudge": { mark: "N", id: "nudge" },
+  };
+
+  const identity = identities[name] ?? {
+    mark: name.slice(0, 1).toUpperCase(),
+    id: "default",
+  };
+
+  return (
+    <span
+      className={`project-mark ${compact ? "project-mark-compact" : ""}`}
+      data-project={identity.id}
+      aria-hidden="true"
+    >
+      {identity.mark}
+    </span>
+  );
+}
+
 function FlagshipCaseStudy({
   project,
   number,
@@ -32,6 +65,7 @@ function FlagshipCaseStudy({
     <article className="flagship-case">
       <div className="flagship-header">
         <div>
+          <ProjectMark name={project.name} />
           <p className="flagship-number">Flagship {number}</p>
           <p className="flagship-label">{project.label}</p>
           <h3>{project.name}</h3>
@@ -291,6 +325,7 @@ export default function Home() {
           <div className="project-grid supporting-project-grid">
             {portfolio.projects.slice(2).map((project) => (
               <article className="project-card" key={project.name}>
+                <ProjectMark name={project.name} compact />
                 <div className="project-topline">
                   <span>{project.label}</span>
                   <span className="status">{project.status}</span>
