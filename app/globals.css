@@ -1108,3 +1108,346 @@ main::before {
     font-size: clamp(2.75rem, 13vw, 4rem);
   }
 }
+
+/* ============================================================
+   PORTFOLIO V2 — FLAGSHIP CASE STUDIES
+   ============================================================ */
+
+.flagship-stack {
+  display: grid;
+  gap: 28px;
+}
+
+.flagship-case {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid rgba(118, 184, 255, .18);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(92, 117, 255, .07), transparent 24rem),
+    linear-gradient(155deg, rgba(18, 27, 42, .88), rgba(8, 13, 22, .82));
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, .2),
+    inset 0 1px 0 rgba(255, 255, 255, .025);
+}
+
+.flagship-case::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6%;
+  width: 24%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  opacity: .7;
+}
+
+.flagship-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: start;
+}
+
+.flagship-number,
+.flagship-label,
+.architecture-label,
+.case-problem > span,
+.engineering-focus-row > span {
+  margin: 0;
+  color: #6f89a9;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.flagship-label {
+  margin-top: 9px;
+}
+
+.flagship-header h3 {
+  margin: 17px 0 8px;
+  font-size: clamp(2.3rem, 4.7vw, 4.7rem);
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+
+.flagship-role {
+  margin: 0;
+  color: #acc0d7;
+  font-size: .94rem;
+}
+
+.flagship-metrics {
+  min-width: 230px;
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .014);
+}
+
+.flagship-metrics > div {
+  display: grid;
+  gap: 5px;
+  padding: 14px 16px;
+}
+
+.flagship-metrics > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.flagship-metrics span {
+  color: #6f849c;
+  font-size: .65rem;
+}
+
+.flagship-metrics strong {
+  color: #d8e4f2;
+  font-size: .78rem;
+}
+
+.flagship-body {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, 1.1fr);
+  gap: clamp(28px, 5vw, 64px);
+  margin-top: 42px;
+}
+
+.flagship-summary {
+  margin: 0;
+  color: #9cafc4;
+  font-size: .95rem;
+  line-height: 1.75;
+}
+
+.case-problem {
+  margin-top: 28px;
+  padding: 18px;
+  border-left: 1px solid rgba(119, 240, 230, .28);
+  background: rgba(119, 240, 230, .02);
+}
+
+.case-problem p {
+  margin: 9px 0 0;
+  color: #c0cede;
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+.architecture-preview {
+  padding: 20px;
+  border: 1px solid rgba(118, 184, 255, .11);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(118, 184, 255, .025), rgba(255, 255, 255, .01));
+}
+
+.architecture-flow {
+  display: grid;
+  gap: 7px;
+  margin-top: 17px;
+}
+
+.architecture-step-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+}
+
+.architecture-step-wrap b {
+  color: #506b8d;
+  font-weight: 400;
+}
+
+.architecture-step {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 11px 13px;
+  border: 1px solid rgba(118, 184, 255, .11);
+  border-radius: 11px;
+  background: rgba(118, 184, 255, .022);
+}
+
+.architecture-step span {
+  color: #597694;
+  font-size: .64rem;
+}
+
+.architecture-step strong {
+  color: #afc0d5;
+  font-size: .76rem;
+  font-weight: 600;
+}
+
+.flagship-evidence {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.evidence-group {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .012);
+}
+
+.evidence-group-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.evidence-group-title strong {
+  color: #c8d6e6;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.evidence-group ul {
+  display: grid;
+  gap: 7px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidence-group li {
+  color: #8599b0;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.evidence-public .evidence-group-title > span,
+.compact-evidence-group.evidence-public > span {
+  color: var(--cyan);
+}
+
+.evidence-private .evidence-group-title > span,
+.compact-evidence-group.evidence-private > span {
+  color: var(--violet);
+}
+
+.evidence-in-progress .evidence-group-title > span,
+.compact-evidence-group.evidence-in-progress > span {
+  color: var(--blue);
+}
+
+.evidence-planned .evidence-group-title > span,
+.compact-evidence-group.evidence-planned > span {
+  color: #8497ac;
+}
+
+.engineering-focus-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.engineering-focus-row > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.engineering-focus-row em {
+  padding: 6px 9px;
+  border: 1px solid rgba(147, 169, 199, .12);
+  border-radius: 999px;
+  color: #8195ad;
+  font-size: .66rem;
+  font-style: normal;
+}
+
+.flagship-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  color: #c8e0fa;
+  font-size: .82rem;
+  font-weight: 750;
+}
+
+.supporting-work {
+  margin-top: 94px;
+}
+
+.supporting-project-grid .project-card {
+  min-height: 0;
+}
+
+.compact-evidence {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.compact-evidence-group {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 8px;
+}
+
+.compact-evidence-group > span {
+  font-size: .68rem;
+  padding-top: 1px;
+}
+
+.compact-evidence-group strong {
+  color: #aebfd1;
+  font-size: .7rem;
+}
+
+.compact-evidence-group p {
+  margin: 5px 0 0;
+  color: #71869e;
+  font-size: .69rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .flagship-header,
+  .flagship-body {
+    grid-template-columns: 1fr;
+  }
+
+  .flagship-metrics {
+    min-width: 0;
+  }
+
+  .flagship-evidence {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .flagship-case {
+    padding: 22px;
+    border-radius: 19px;
+  }
+
+  .flagship-header h3 {
+    font-size: 2.65rem;
+  }
+
+  .engineering-focus-row {
+    grid-template-columns: 1fr;
+  }
+
+  .supporting-work {
+    margin-top: 72px;
+  }
+}

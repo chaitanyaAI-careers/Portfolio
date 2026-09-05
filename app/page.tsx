@@ -20,6 +20,136 @@ function SectionTitle({
   );
 }
 
+
+function EvidenceGroup({
+  status,
+  title,
+  items,
+}: {
+  status: "public" | "private" | "in-progress" | "planned";
+  title: string;
+  items: string[];
+}) {
+  const symbols = {
+    public: "●",
+    private: "◆",
+    "in-progress": "◐",
+    planned: "○",
+  };
+
+  return (
+    <div className={`evidence-group evidence-${status}`}>
+      <div className="evidence-group-title">
+        <span aria-hidden="true">{symbols[status]}</span>
+        <strong>{title}</strong>
+      </div>
+
+      <ul>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function FlagshipCaseStudy({
+  project,
+  number,
+}: {
+  project: (typeof portfolio.projects)[number];
+  number: string;
+}) {
+  return (
+    <article className="flagship-case">
+      <div className="flagship-header">
+        <div>
+          <p className="flagship-number">Flagship {number}</p>
+          <p className="flagship-label">{project.label}</p>
+          <h3>{project.name}</h3>
+          <p className="flagship-role">{project.role}</p>
+        </div>
+
+        <div className="flagship-metrics">
+          {project.metrics.map((metric) => (
+            <div key={metric.label}>
+              <span>{metric.label}</span>
+              <strong>{metric.value}</strong>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flagship-body">
+        <div className="flagship-copy">
+          <p className="flagship-summary">{project.summary}</p>
+
+          {project.caseStudy ? (
+            <div className="case-problem">
+              <span>Engineering question</span>
+              <p>{project.caseStudy.problem}</p>
+            </div>
+          ) : null}
+        </div>
+
+        {project.caseStudy ? (
+          <div className="architecture-preview" aria-label={`${project.name} architecture overview`}>
+            <span className="architecture-label">Architecture</span>
+
+            <div className="architecture-flow">
+              {project.caseStudy.architecture.map((step, index) => (
+                <div className="architecture-step-wrap" key={step}>
+                  <div className="architecture-step">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{step}</strong>
+                  </div>
+
+                  {index < project.caseStudy!.architecture.length - 1 ? (
+                    <b aria-hidden="true">↓</b>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
+
+      <div className="flagship-evidence">
+        {project.evidence.map((group) => (
+          <EvidenceGroup
+            key={`${project.name}-${group.status}-${group.title}`}
+            status={group.status}
+            title={group.title}
+            items={group.items}
+          />
+        ))}
+      </div>
+
+      {project.caseStudy ? (
+        <div className="engineering-focus-row">
+          <span>Engineering focus</span>
+
+          <div>
+            {project.caseStudy.engineeringFocus.map((focus) => (
+              <em key={focus}>{focus}</em>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      <a
+        className="flagship-link"
+        href={project.href}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Explore repository
+        <ExternalIcon />
+      </a>
+    </article>
+  );
+}
+
 export default function Home() {
   return (
     <main>
@@ -181,38 +311,81 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="section shell">
+      <section id="work" className="section shell work-section">
         <SectionTitle
-          eyebrow="Selected engineering"
-          title="Six projects, six distinct signals."
-          copy="Flagships lead with Applied AI depth. Supporting projects prove product, backend, governance and workflow-systems range."
+          eyebrow="Flagship engineering"
+          title="Two systems that define the portfolio."
+          copy="The flagships show the deepest Applied AI work: governed agentic systems and evidence-centered regulated AI."
         />
 
-        <div className="project-grid">
-          {portfolio.projects.map((project, index) => (
-            <article className={`project-card ${index < 3 ? "featured-card" : ""}`} key={project.name}>
-              <div className="project-topline">
-                <span>{project.label}</span>
-                <span className="status">{project.status}</span>
-              </div>
-              <h3>{project.name}</h3>
-              <p className="project-role">{project.role}</p>
-              <p className="project-summary">{project.summary}</p>
+        <div className="flagship-stack">
+          <FlagshipCaseStudy project={portfolio.projects[0]} number="01" />
+          <FlagshipCaseStudy project={portfolio.projects[1]} number="02" />
+        </div>
 
-              <ul className="proof-list">
-                {project.proof.map((proof) => <li key={proof}>{proof}</li>)}
-              </ul>
+        <div className="supporting-work">
+          <SectionTitle
+            eyebrow="Selected engineering"
+            title="Four projects, four additional engineering signals."
+            copy="Product engineering, governed retrieval, backend architecture and workflow reliability broaden the portfolio without duplicating the flagships."
+          />
 
-              <div className="chip-row">
-                {project.stack.map((tech) => <span className="chip" key={tech}>{tech}</span>)}
-              </div>
+          <div className="project-grid supporting-project-grid">
+            {portfolio.projects.slice(2).map((project) => (
+              <article className="project-card" key={project.name}>
+                <div className="project-topline">
+                  <span>{project.label}</span>
+                  <span className="status">{project.status}</span>
+                </div>
 
-              <a className="repo-link" href={project.href} target="_blank" rel="noreferrer">
-                View repository
-                <ExternalIcon />
-              </a>
-            </article>
-          ))}
+                <h3>{project.name}</h3>
+                <p className="project-role">{project.role}</p>
+                <p className="project-summary">{project.summary}</p>
+
+                <div className="compact-evidence">
+                  {project.evidence.map((group) => (
+                    <div
+                      className={`compact-evidence-group evidence-${group.status}`}
+                      key={`${project.name}-${group.status}-${group.title}`}
+                    >
+                      <span>
+                        {group.status === "public"
+                          ? "●"
+                          : group.status === "private"
+                            ? "◆"
+                            : group.status === "in-progress"
+                              ? "◐"
+                              : "○"}
+                      </span>
+
+                      <div>
+                        <strong>{group.title}</strong>
+                        <p>{group.items.slice(0, 3).join(" · ")}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="chip-row">
+                  {project.stack.map((tech) => (
+                    <span className="chip" key={tech}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  className="repo-link"
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View repository
+                  <ExternalIcon />
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
