@@ -480,3 +480,87 @@ export const portfolio = {
     ],
   },
 };
+
+export const aboutProfile = {
+  eyebrow: "ABOUT",
+  title: "Applied AI engineering grounded in software systems.",
+  paragraphs: [
+    "I am an Applied AI Engineer and software developer focused on building practical systems across Generative AI, LLM applications, retrieval, agentic workflows, AI platforms, backend engineering, evaluation, governance, and reliability.",
+    "My work connects AI capability with production engineering: semantic retrieval, structured outputs, human-in-the-loop controls, orchestration, APIs, service boundaries, workflow state, testing, CI, and regulated-system design.",
+  ],
+  facts: [
+    { label: "Primary", value: "Applied AI Engineering" },
+    { label: "Focus", value: "GenAI · RAG · Agentic AI" },
+    { label: "Engineering", value: "AI Platforms · APIs · Backend" },
+    { label: "Location", value: "United States · Remote / Relocation" },
+  ],
+};
+
+export const professionalExperience = [
+  {
+    company: "SPACTR AI Labs LLC",
+    role: "Software Developer — Applied AI Engineering",
+    period: "June 2026 — Present",
+    location: "United States · Remote",
+    summary:
+      "Building and strengthening an Applied AI and software-engineering portfolio spanning agentic AI, regulated AI, governed retrieval, product engineering, backend systems, evaluation, governance, and reliability.",
+    highlights: [
+      "Architected governed agentic-AI workflows with role routing, human approvals, controlled execution, evaluation, and broader private multi-agent orchestration.",
+      "Developed evidence-centered regulated-AI, retrieval, product, backend, and workflow-reliability systems with explicit public/private/planned evidence boundaries.",
+      "Built automated testing and CI across agent behavior, retrieval, service contracts, workflow state transitions, and regression behavior.",
+    ],
+    skills: [
+      "Python",
+      "FastAPI",
+      "Agentic AI",
+      "RAG",
+      "Evaluation",
+      "Governance",
+      "TypeScript",
+    ],
+  },
+  {
+    company: "SolutionsMax Technology Services Inc.",
+    role: "Software Developer — Applied AI/ML Engineering",
+    period: "February 2026 — May 2026",
+    location: "Sacramento, California · Remote",
+    summary:
+      "Developed Python backend, document-processing, and AI-assisted workflows for enterprise and pharmaceutical software environments.",
+    highlights: [
+      "Built FastAPI services for document ingestion, structured extraction, retrieval, transformation, and downstream application workflows.",
+      "Applied chunking, embeddings, semantic search, metadata filtering, structured outputs, PostgreSQL, vector-search technologies, and LLM integrations.",
+      "Supported testing, debugging, integrations, deployment workflows, and regulated document and compliance-oriented systems.",
+    ],
+    skills: [
+      "Python",
+      "FastAPI",
+      "LLMs",
+      "Semantic Retrieval",
+      "PostgreSQL",
+      "Docker",
+      "AWS",
+    ],
+  },
+  {
+    company: "SolutionsMax Technology Services Pvt. Ltd.",
+    role: "Software Developer — Regulated Data & Enterprise Systems",
+    period: "June 2020 — July 2023",
+    location: "Visakhapatnam, India",
+    summary:
+      "Worked across enterprise software and regulated pharmaceutical data workflows using Python, SQL, relational systems, ETL, testing, and technical documentation.",
+    highlights: [
+      "Built Python and SQL validation, transformation, ETL, migration, and reporting workflows for enterprise datasets.",
+      "Contributed to QMS, CAPA, deviations, change control, controlled documentation, RBAC, audit trails, traceability, and data-integrity workflows.",
+      "Supported system analysis, integrations, testing, debugging, migration, deployment, and validation-oriented engineering activities.",
+    ],
+    skills: [
+      "Python",
+      "SQL",
+      "ETL",
+      "Relational Databases",
+      "QMS",
+      "Data Integrity",
+      "Testing",
+    ],
+  },
+];

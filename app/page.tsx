@@ -1,6 +1,10 @@
 import { ExternalIcon, GitHubIcon } from "@/components/icons";
 import { SocialLinks } from "@/components/social-links";
-import { portfolio } from "@/data/portfolio";
+import {
+  portfolio,
+  aboutProfile,
+  professionalExperience,
+} from "@/data/portfolio";
 
 function SectionTitle({
   eyebrow,
@@ -303,7 +307,86 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="section shell work-section">
+      
+      <section className="about-section" id="about">
+        <div className="section-heading about-heading">
+          <div>
+            <p className="eyebrow">{aboutProfile.eyebrow}</p>
+            <h2>{aboutProfile.title}</h2>
+          </div>
+        </div>
+
+        <div className="about-layout">
+          <div className="about-copy">
+            {aboutProfile.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="about-facts">
+            {aboutProfile.facts.map((fact) => (
+              <div className="about-fact" key={fact.label}>
+                <span>{fact.label}</span>
+                <strong>{fact.value}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="experience-section" id="experience">
+        <div className="section-heading experience-heading">
+          <div>
+            <p className="eyebrow">PROFESSIONAL EXPERIENCE</p>
+            <h2>Engineering across AI systems, backend platforms, and regulated software.</h2>
+          </div>
+
+          <p>
+            Experience spans Applied AI, enterprise software, regulated data systems,
+            APIs, retrieval, evaluation, reliability, and production-oriented engineering.
+          </p>
+        </div>
+
+        <div className="experience-list">
+          {professionalExperience.map((item, index) => (
+            <article className="experience-card" key={`${item.company}-${item.period}`}>
+              <div className="experience-index">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div className="experience-main">
+                <div className="experience-header">
+                  <div>
+                    <h3>{item.role}</h3>
+                    <p className="experience-company">{item.company}</p>
+                  </div>
+
+                  <div className="experience-meta">
+                    <span>{item.period}</span>
+                    <span>{item.location}</span>
+                  </div>
+                </div>
+
+                <p className="experience-summary">{item.summary}</p>
+
+                <ul className="experience-highlights">
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+
+                <div className="experience-skills">
+                  {item.skills.map((skill) => (
+                    <span key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+<section id="work" className="section shell work-section">
         <SectionTitle
           eyebrow="Flagship engineering"
           title="Two systems that define the portfolio."
