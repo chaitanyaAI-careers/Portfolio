@@ -2048,3 +2048,41 @@ main::before {
     width: min(calc(100% - 32px), 1180px);
   }
 }
+
+/* Portfolio V2 — anchor navigation polish */
+
+#architecture,
+#about,
+#experience,
+#work,
+#stack,
+#contact {
+  scroll-margin-top: 92px;
+}
+
+
+/* Portfolio V2 — persistent recruiter navigation */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Fixed navigation is removed from document flow,
+   so preserve its original vertical space. */
+main {
+  padding-top: 64px;
+}
+
+#architecture,
+#about,
+#experience,
+#work,
+#stack,
+#contact {
+  scroll-margin-top: 92px;
+}

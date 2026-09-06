@@ -163,8 +163,8 @@ export default function Home() {
           </a>
 
           <div className="nav-links">
+            <a href="#experience">Experience</a>
             <a href="#work">Work</a>
-            <a href="#architecture">Architecture</a>
             <a href="#stack">Stack</a>
             <a href="#contact">Contact</a>
           </div>
