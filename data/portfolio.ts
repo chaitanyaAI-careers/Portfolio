@@ -1,12 +1,49 @@
+export type EvidenceStatus =
+  | "public"
+  | "private"
+  | "in-progress"
+  | "planned";
+
+export type ProjectTier =
+  | "flagship"
+  | "featured"
+  | "supporting";
+
+export type EvidenceGroup = {
+  status: EvidenceStatus;
+  title: string;
+  items: string[];
+};
+
+export type ProjectMetric = {
+  label: string;
+  value: string;
+};
+
+export type FlagshipCaseStudy = {
+  problem: string;
+  architecture: string[];
+  engineeringFocus: string[];
+};
+
 export type Project = {
   name: string;
   label: string;
   role: string;
   summary: string;
+
+  // V1 compatibility fields. These will be replaced by the richer
+  // evidence presentation when the V2 project components are added.
   proof: string[];
   stack: string[];
-  href: string;
   status: string;
+
+  tier: ProjectTier;
+  evidence: EvidenceGroup[];
+  metrics: ProjectMetric[];
+  caseStudy?: FlagshipCaseStudy;
+
+  href: string;
 };
 
 export const portfolio = {
@@ -24,6 +61,32 @@ export const portfolio = {
     linkedin: "https://www.linkedin.com/in/chaitanyaai-careers/",
     email: "mailto:chaitanya.careerpaths@gmail.com",
   },
+  statusLegend: [
+    {
+      status: "public" as const,
+      symbol: "●",
+      title: "Implemented — Public",
+      text: "Verifiable implementation evidence exists in the public repository.",
+    },
+    {
+      status: "private" as const,
+      symbol: "◆",
+      title: "Implemented — Private",
+      text: "Broader implementation exists outside the recruiter-safe public repository.",
+    },
+    {
+      status: "in-progress" as const,
+      symbol: "◐",
+      title: "In Progress",
+      text: "Actively being developed or strengthened.",
+    },
+    {
+      status: "planned" as const,
+      symbol: "○",
+      title: "Platform Direction",
+      text: "Architecture or roadmap direction; not claimed as implemented.",
+    },
+  ],
   focus: [
     {
       title: "Applied AI",
@@ -58,6 +121,72 @@ export const portfolio = {
       stack: ["Python", "pytest", "GitHub Actions", "Evaluation", "Human Approval"],
       href: "https://github.com/chaitanyaAI-careers/Agentic-ai-platform",
       status: "Active flagship",
+      tier: "flagship",
+      metrics: [
+        { label: "Public verification", value: "7 tests + CI" },
+        { label: "Primary signal", value: "Agentic AI Platform" },
+      ],
+      evidence: [
+        {
+          status: "public",
+          title: "Public Evidence",
+          items: [
+            "Role routing",
+            "Approval and risk controls",
+            "Controlled-execution boundaries",
+            "Provider abstraction",
+            "Deterministic evaluation",
+            "Automated tests and GitHub Actions CI",
+          ],
+        },
+        {
+          status: "private",
+          title: "Broader Platform Implementation",
+          items: [
+            "Planner / Coder / Reviewer / Tester orchestration",
+            "Governance and policy gates",
+            "Auditability and execution lineage",
+            "Model routing and broader operator workflows",
+          ],
+        },
+        {
+          status: "in-progress",
+          title: "In Progress",
+          items: [
+            "MCP client / server foundation",
+            "MCP discovery and schema handling",
+            "Authorized MCP invocation",
+          ],
+        },
+        {
+          status: "planned",
+          title: "Platform Direction",
+          items: [
+            "PostgreSQL durable workflow state",
+            "Pause / persist / restart / resume",
+            "Dockerized runtime",
+            "Expanded observability",
+          ],
+        },
+      ],
+      caseStudy: {
+        problem:
+          "How can multi-agent systems execute useful work while preserving explicit authorization, human control, evaluation, and operational boundaries?",
+        architecture: [
+          "Request / task intake",
+          "Role routing and orchestration",
+          "Approval and policy gates",
+          "Controlled execution",
+          "Evaluation and auditability",
+        ],
+        engineeringFocus: [
+          "Agent orchestration",
+          "Human-in-the-loop control",
+          "Governance",
+          "Evaluation",
+          "AI platform reliability",
+        ],
+      },
     },
     {
       name: "Pharma AI Platform",
@@ -74,6 +203,54 @@ export const portfolio = {
       stack: ["Python", "Dataclasses", "Enum", "pytest", "GitHub Actions"],
       href: "https://github.com/chaitanyaAI-careers/Pharma-ai-platform",
       status: "Active flagship",
+      tier: "flagship",
+      metrics: [
+        { label: "Public verification", value: "8 tests + CI" },
+        { label: "Primary signal", value: "Regulated AI" },
+      ],
+      evidence: [
+        {
+          status: "public",
+          title: "Public Evidence",
+          items: [
+            "Retrieval-evidence contracts",
+            "Stable citation identity",
+            "Grounded-answer contracts",
+            "Structured summary contracts",
+            "Trace IDs and human-review transitions",
+            "Automated tests and GitHub Actions CI",
+          ],
+        },
+        {
+          status: "planned",
+          title: "Broader Platform Direction",
+          items: [
+            "Document intelligence and version-aware preparation",
+            "Dense / lexical / hybrid retrieval",
+            "Metadata filtering and reranking",
+            "Retrieval and citation evaluation",
+            "Governance and review expansion",
+          ],
+        },
+      ],
+      caseStudy: {
+        problem:
+          "How should regulated document-intelligence systems represent evidence, grounded outputs, review state, and traceability before adding more complex retrieval and LLM layers?",
+        architecture: [
+          "Document / evidence inputs",
+          "Evidence and citation contracts",
+          "Grounded or structured output",
+          "Human review",
+          "Traceability and evaluation",
+        ],
+        engineeringFocus: [
+          "Grounding",
+          "Citation integrity",
+          "Structured outputs",
+          "Human review",
+          "Regulated-AI engineering",
+        ],
+      },
     },
     {
       name: "Job Copilot",
@@ -90,6 +267,46 @@ export const portfolio = {
       stack: ["TypeScript", "React", "Node.js", "Vitest", "GitHub Actions"],
       href: "https://github.com/chaitanyaAI-careers/Job-copilot",
       status: "Portfolio-ready showcase",
+      tier: "featured",
+      metrics: [
+        { label: "Public verification", value: "19 tests / 7 files + CI" },
+        { label: "Primary signal", value: "Product Engineering" },
+      ],
+      evidence: [
+        {
+          status: "public",
+          title: "Public Evidence",
+          items: [
+            "Governed connector policy",
+            "Job normalization",
+            "Freshness classification",
+            "Cross-source deduplication",
+            "Deterministic skill matching",
+            "React UI example, Vitest, type checking, and CI",
+          ],
+        },
+        {
+          status: "private",
+          title: "Broader Product Implementation",
+          items: [
+            "Next.js / React application architecture",
+            "PostgreSQL / Prisma persistence",
+            "Authentication foundations",
+            "Resume and application workflows",
+            "ATS connector architecture",
+          ],
+        },
+        {
+          status: "in-progress",
+          title: "Currently Strengthening",
+          items: [
+            "Private-monorepo test coverage",
+            "Playwright end-to-end coverage",
+            "Retry / backoff and connector observability",
+            "Formal matching evaluation",
+          ],
+        },
+      ],
     },
     {
       name: "HR AI Content System",
@@ -106,6 +323,35 @@ export const portfolio = {
       stack: ["Python", "Sentence Transformers", "NumPy", "scikit-learn", "Gradio", "pytest"],
       href: "https://github.com/chaitanyaAI-careers/HR-ai-content-system",
       status: "Supporting project",
+      tier: "featured",
+      metrics: [
+        { label: "Public verification", value: "17 tests + CI" },
+        { label: "Primary signal", value: "Governed Retrieval" },
+      ],
+      evidence: [
+        {
+          status: "public",
+          title: "Public Evidence",
+          items: [
+            "SentenceTransformer embeddings",
+            "NumPy-backed semantic retrieval",
+            "Deterministic PII redaction",
+            "Role-conditioned governance",
+            "Grounded extractive answers",
+            "Golden-question evaluation and CI",
+          ],
+        },
+        {
+          status: "planned",
+          title: "Research Direction",
+          items: [
+            "Authorization-aware / RBAC retrieval",
+            "Recall@K, MRR, and NDCG",
+            "Leakage-rate measurement",
+            "Governance regression benchmarking",
+          ],
+        },
+      ],
     },
     {
       name: "Medicine Verification Platform",
@@ -122,6 +368,35 @@ export const portfolio = {
       stack: ["Python", "FastAPI", "Pydantic", "pytest", "GitHub Actions"],
       href: "https://github.com/chaitanyaAI-careers/Medicine-verification-platform",
       status: "Supporting project",
+      tier: "supporting",
+      metrics: [
+        { label: "Public verification", value: "7 tests + CI" },
+        { label: "Primary signal", value: "Backend / API" },
+      ],
+      evidence: [
+        {
+          status: "public",
+          title: "Public Evidence",
+          items: [
+            "FastAPI health and verification endpoints",
+            "Pydantic request / response contracts",
+            "Service-layer orchestration",
+            "Repository abstraction",
+            "Synthetic regulatory-source adapter",
+            "Automated API / service tests and CI",
+          ],
+        },
+        {
+          status: "planned",
+          title: "Platform Direction",
+          items: [
+            "Database-backed persistence",
+            "Real regulatory-data integration",
+            "Containerization",
+            "Authentication and authorization",
+          ],
+        },
+      ],
     },
     {
       name: "Nudge",
@@ -138,6 +413,36 @@ export const portfolio = {
       stack: ["Python", "Dataclasses", "Enum", "pytest", "GitHub Actions"],
       href: "https://github.com/chaitanyaAI-careers/Nudge",
       status: "Supporting project",
+      tier: "supporting",
+      metrics: [
+        { label: "Public verification", value: "8 tests + CI" },
+        { label: "Primary signal", value: "Workflow Reliability" },
+      ],
+      evidence: [
+        {
+          status: "public",
+          title: "Public Evidence",
+          items: [
+            "Scheduled-work contracts",
+            "Queue eligibility rules",
+            "Idempotency-key requirements",
+            "Explicit workflow lifecycle states",
+            "Controlled delivery transitions",
+            "Automated tests and CI",
+          ],
+        },
+        {
+          status: "planned",
+          title: "Platform Direction",
+          items: [
+            "Scheduler and worker runtime",
+            "Durable persistence",
+            "Retry / backoff policy",
+            "Notification adapters",
+            "Trusted-contact workflows",
+          ],
+        },
+      ],
     },
   ] satisfies Project[],
   skills: {
@@ -175,3 +480,87 @@ export const portfolio = {
     ],
   },
 };
+
+export const aboutProfile = {
+  eyebrow: "ABOUT",
+  title: "Applied AI engineering grounded in software systems.",
+  paragraphs: [
+    "I am an Applied AI Engineer and software developer focused on building practical systems across Generative AI, LLM applications, retrieval, agentic workflows, AI platforms, backend engineering, evaluation, governance, and reliability.",
+    "My work connects AI capability with production engineering: semantic retrieval, structured outputs, human-in-the-loop controls, orchestration, APIs, service boundaries, workflow state, testing, CI, and regulated-system design.",
+  ],
+  facts: [
+    { label: "Primary", value: "Applied AI Engineering" },
+    { label: "Focus", value: "GenAI · RAG · Agentic AI" },
+    { label: "Engineering", value: "AI Platforms · APIs · Backend" },
+    { label: "Location", value: "United States · Remote / Relocation" },
+  ],
+};
+
+export const professionalExperience = [
+  {
+    company: "SPACTR AI Labs LLC",
+    role: "Software Developer — Applied AI Engineering",
+    period: "June 2026 — Present",
+    location: "United States · Remote",
+    summary:
+      "Building and strengthening an Applied AI and software-engineering portfolio spanning agentic AI, regulated AI, governed retrieval, product engineering, backend systems, evaluation, governance, and reliability.",
+    highlights: [
+      "Architected governed agentic-AI workflows with role routing, human approvals, controlled execution, evaluation, and broader private multi-agent orchestration.",
+      "Developed evidence-centered regulated-AI, retrieval, product, backend, and workflow-reliability systems with explicit public/private/planned evidence boundaries.",
+      "Built automated testing and CI across agent behavior, retrieval, service contracts, workflow state transitions, and regression behavior.",
+    ],
+    skills: [
+      "Python",
+      "FastAPI",
+      "Agentic AI",
+      "RAG",
+      "Evaluation",
+      "Governance",
+      "TypeScript",
+    ],
+  },
+  {
+    company: "SolutionsMax Technology Services Inc.",
+    role: "Software Developer — Applied AI/ML Engineering",
+    period: "February 2026 — May 2026",
+    location: "Sacramento, California · Remote",
+    summary:
+      "Developed Python backend, document-processing, and AI-assisted workflows for enterprise and pharmaceutical software environments.",
+    highlights: [
+      "Built FastAPI services for document ingestion, structured extraction, retrieval, transformation, and downstream application workflows.",
+      "Applied chunking, embeddings, semantic search, metadata filtering, structured outputs, PostgreSQL, vector-search technologies, and LLM integrations.",
+      "Supported testing, debugging, integrations, deployment workflows, and regulated document and compliance-oriented systems.",
+    ],
+    skills: [
+      "Python",
+      "FastAPI",
+      "LLMs",
+      "Semantic Retrieval",
+      "PostgreSQL",
+      "Docker",
+      "AWS",
+    ],
+  },
+  {
+    company: "SolutionsMax Technology Services Pvt. Ltd.",
+    role: "Software Developer — Regulated Data & Enterprise Systems",
+    period: "June 2020 — July 2023",
+    location: "Visakhapatnam, India",
+    summary:
+      "Worked across enterprise software and regulated pharmaceutical data workflows using Python, SQL, relational systems, ETL, testing, and technical documentation.",
+    highlights: [
+      "Built Python and SQL validation, transformation, ETL, migration, and reporting workflows for enterprise datasets.",
+      "Contributed to QMS, CAPA, deviations, change control, controlled documentation, RBAC, audit trails, traceability, and data-integrity workflows.",
+      "Supported system analysis, integrations, testing, debugging, migration, deployment, and validation-oriented engineering activities.",
+    ],
+    skills: [
+      "Python",
+      "SQL",
+      "ETL",
+      "Relational Databases",
+      "QMS",
+      "Data Integrity",
+      "Testing",
+    ],
+  },
+];
