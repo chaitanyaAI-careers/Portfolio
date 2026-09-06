@@ -2155,3 +2155,40 @@ main {
     flex: 0 0 auto;
   }
 }
+
+/* Portfolio V2 — keyboard focus + mobile tap accessibility */
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #76b8ff;
+  outline-offset: 4px;
+}
+
+/* Keep focus indication clean on rounded interactive elements. */
+.button:focus-visible,
+.social-link:focus-visible,
+.flagship-link:focus-visible,
+.project-card a:focus-visible,
+.site-nav a:focus-visible {
+  border-radius: 8px;
+}
+
+/* Comfortable phone tap targets without changing desktop layout. */
+@media (max-width: 640px) {
+  .site-nav .nav-links a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-nav .brand {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
