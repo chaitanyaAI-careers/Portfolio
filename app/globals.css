@@ -2086,3 +2086,72 @@ main {
 #contact {
   scroll-margin-top: 92px;
 }
+
+/* Portfolio V2 — mobile persistent navigation */
+
+@media (max-width: 640px) {
+  .site-nav .nav {
+    gap: 12px;
+    padding-inline: 16px;
+  }
+
+  .site-nav .brand {
+    flex: 0 0 auto;
+  }
+
+  .site-nav .brand-copy small {
+    display: none;
+  }
+
+  .site-nav .nav-links {
+    display: flex !important;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .site-nav .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav .nav-links a {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    padding-block: 8px;
+  }
+}
+
+/* Portfolio V2 — final mobile nav spacing */
+
+@media (max-width: 640px) {
+  .site-nav .brand-copy {
+    display: none;
+  }
+
+  .site-nav .nav {
+    gap: 10px;
+    padding-inline: 14px;
+  }
+
+  .site-nav .brand-mark {
+    flex: 0 0 auto;
+  }
+
+  .site-nav .nav-links {
+    justify-content: flex-start;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .site-nav .nav-links a {
+    font-size: 0.68rem;
+    flex: 0 0 auto;
+  }
+}
