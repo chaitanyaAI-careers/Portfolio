@@ -315,7 +315,7 @@ export const portfolio = {
       summary:
         "Governed enterprise-retrieval project implementing SentenceTransformer embeddings, semantic search, deterministic PII redaction, role-conditioned governance, grounded extractive answers, and evaluation.",
       proof: [
-        "SentenceTransformer embeddings and NumPy-backed retrieval",
+        "SentenceTransformer embeddings and scikit-learn cosine-similarity retrieval",
         "Deterministic PII / sensitive-term redaction",
         "Role-conditioned governance; RBAC-aware retrieval is roadmap",
         "17-test unit/integration suite and GitHub Actions CI",
@@ -334,7 +334,7 @@ export const portfolio = {
           title: "Public Evidence",
           items: [
             "SentenceTransformer embeddings",
-            "NumPy-backed semantic retrieval",
+            "scikit-learn cosine-similarity semantic retrieval",
             "Deterministic PII redaction",
             "Role-conditioned governance",
             "Grounded extractive answers",
@@ -499,11 +499,11 @@ export const aboutProfile = {
 export const professionalExperience = [
   {
     company: "SPACTR AI Labs LLC",
-    role: "Software Developer — Applied AI Engineering",
+    role: "Software Developer — Applied AI Engineering (Independent)",
     period: "June 2026 — Present",
     location: "United States · Remote",
     summary:
-      "Building and strengthening an Applied AI and software-engineering portfolio spanning agentic AI, regulated AI, governed retrieval, product engineering, backend systems, evaluation, governance, and reliability.",
+      "Independent Applied AI and software-engineering work conducted through SPACTR AI Labs LLC, focused on building and strengthening production-oriented AI systems across agentic AI, regulated AI, governed retrieval, product engineering, backend systems, evaluation, governance, and reliability.",
     highlights: [
       "Architected governed agentic-AI workflows with role routing, human approvals, controlled execution, evaluation, and broader private multi-agent orchestration.",
       "Developed evidence-centered regulated-AI, retrieval, product, backend, and workflow-reliability systems with explicit public/private/planned evidence boundaries.",
