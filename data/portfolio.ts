@@ -50,7 +50,7 @@ export const portfolio = {
   name: "Chaitanya Sai",
   headline: "Applied AI Engineer",
   positioning:
-    "Generative AI · LLMs · RAG · Agentic AI · AI Platform & Backend Engineering",
+    "Generative AI · LLM Applications · RAG · Agentic AI · AI Platform & Backend Engineering",
   location: "Texas, USA · Open to Remote & Relocation",
   email: "chaitanya.careerpaths@gmail.com",
   intro:
@@ -111,7 +111,7 @@ export const portfolio = {
       label: "Flagship · Agentic AI / AI Platform",
       role: "Governed agent orchestration and controlled execution",
       summary:
-        "Flagship agentic AI and AI-platform project with public evidence for role routing, approval and risk controls, controlled-execution boundaries, provider abstraction, deterministic evaluation, testing, and CI. Broader platform development extends into multi-agent orchestration, governance, auditability, and MCP integration.",
+        "Flagship agentic AI and AI-platform project with public evidence for role routing, approval and risk controls, controlled-execution boundaries, provider abstraction, deterministic evaluation, testing, and CI. Broader platform development extends into multi-agent orchestration, governance, auditability, and MCP discovery and governance foundations.",
       proof: [
         "Role routing and approval / risk controls",
         "Controlled-execution boundaries",
@@ -153,9 +153,9 @@ export const portfolio = {
           status: "in-progress",
           title: "In Progress",
           items: [
-            "MCP client / server foundation",
+            "MCP interoperability foundations",
             "MCP discovery and schema handling",
-            "Authorized MCP invocation",
+            "Authorization-aware MCP invocation foundations",
           ],
         },
         {
@@ -528,7 +528,7 @@ export const professionalExperience = [
       "Developed Python backend, document-processing, and AI-assisted workflows for enterprise and pharmaceutical software environments.",
     highlights: [
       "Built FastAPI services for document ingestion, structured extraction, retrieval, transformation, and downstream application workflows.",
-      "Applied chunking, embeddings, semantic search, metadata filtering, structured outputs, PostgreSQL, vector-search technologies, and LLM integrations.",
+      "Applied chunking, embeddings, semantic search, metadata filtering, structured outputs, PostgreSQL/vector search, and LLM integrations.",
       "Supported testing, debugging, integrations, deployment workflows, and regulated document and compliance-oriented systems.",
     ],
     skills: [
@@ -543,7 +543,7 @@ export const professionalExperience = [
   },
   {
     company: "SolutionsMax Technology Services Pvt. Ltd.",
-    role: "Software Developer — Regulated Data & Enterprise Systems",
+    role: "Software Developer — Data, Search & Automation Systems",
     period: "June 2020 — July 2023",
     location: "Visakhapatnam, India",
     summary:
