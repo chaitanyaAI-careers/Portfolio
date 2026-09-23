@@ -481,7 +481,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="stack-label">Broader engineering experience & platform direction</p>
+            <p className="stack-label">Broader engineering experience</p>
             <div className="stack-cloud">
               {portfolio.skills.broaderDirection.map((skill) => (
                 <span key={skill}>{skill}</span>
@@ -519,7 +519,7 @@ export default function Home() {
 
       <footer className="footer shell">
         <span>© 2026 {portfolio.name}</span>
-        <span>Applied AI · LLMs · RAG · Agentic AI · AI Platforms</span>
+        <span>Applied AI · LLM Applications · RAG · Agentic AI · AI Platforms</span>
       </footer>
     </main>
   );
