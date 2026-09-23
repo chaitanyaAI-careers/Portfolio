@@ -98,7 +98,7 @@ export const portfolio = {
     },
     {
       title: "Architecture & Reliability",
-      text: "Service boundaries, data flows, persistence, authorization, workflow reliability, observability, and deployment architecture.",
+      text: "Service boundaries, data flows, persistence, authorization, workflow reliability, and deployment architecture.",
     },
     {
       title: "Backend Engineering",
@@ -476,7 +476,6 @@ export const portfolio = {
       "Prisma",
       "Authentication",
       "Docker",
-      "Observability",
     ],
   },
 };
