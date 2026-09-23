@@ -2,7 +2,7 @@
 
 Production recruiter-facing portfolio for:
 
-**Applied AI Engineering · Generative AI · LLMs · RAG · Agentic AI · AI Platform & Backend Engineering**
+**Applied AI Engineering · Generative AI · LLM Applications · RAG · Agentic AI · AI Platform & Backend Engineering**
 
 Live portfolio:
 
@@ -22,7 +22,7 @@ Implemented public evidence, broader private implementation, active development,
 
 Flagship agentic-AI and AI-platform project demonstrating public evidence for role routing, approval/risk controls, controlled-execution boundaries, provider abstraction, deterministic evaluation, testing, and CI.
 
-The portfolio also presents broader private implementation, active MCP work, and planned durable-workflow/observability architecture with explicit evidence labels.
+The portfolio also presents broader private implementation, MCP discovery and governance foundations, and planned durable-workflow/observability architecture with explicit evidence labels.
 
 ### Pharma AI Platform
 
