@@ -50,11 +50,11 @@ export const portfolio = {
   name: "Chaitanya Sai",
   headline: "Applied AI Engineer",
   positioning:
-    "Generative AI · LLM Applications · RAG · Agentic AI · AI Platform & Backend Engineering",
+    "Agentic AI · RAG · AI Platform & Backend · AI Product Engineering",
   location: "Texas, USA · Open to Remote & Relocation",
   email: "chaitanya.careerpaths@gmail.com",
   intro:
-    "I build applied AI systems that connect model intelligence with production engineering: retrieval, agent orchestration, governed execution, APIs, evaluation, backend architecture, and reliability.",
+    "I build production-oriented Applied AI systems across agentic orchestration, hybrid retrieval, AI backends, full-stack AI products, evaluation, governance, observability, reliability, and regulated software.",
   resumeUrl: "",
   links: {
     github: "https://github.com/chaitanyaAI-careers",
@@ -111,7 +111,7 @@ export const portfolio = {
       label: "Flagship · Agentic AI / AI Platform",
       role: "Governed agent orchestration and controlled execution",
       summary:
-        "Flagship agentic AI and AI-platform project with public evidence for role routing, approval and risk controls, controlled-execution boundaries, provider abstraction, deterministic evaluation, testing, and CI. Broader platform development extends into multi-agent orchestration, governance, auditability, and MCP discovery and governance foundations.",
+        "Flagship agentic AI and AI-platform system. The public showcase demonstrates role routing, approvals, controlled execution, deterministic evaluation, testing, and CI; the verified broader implementation adds LangGraph typed-state orchestration, MCP, durable checkpoints, LiteLLM routing, Redis/Kafka runtimes, identity controls, observability, and cloud deployment.",
       proof: [
         "Role routing and approval / risk controls",
         "Controlled-execution boundaries",
@@ -123,8 +123,9 @@ export const portfolio = {
       status: "Active flagship",
       tier: "flagship",
       metrics: [
+        { label: "Task completion", value: "94.8%" },
+        { label: "Regression tests", value: "3,950+" },
         { label: "Public verification", value: "7 tests + CI" },
-        { label: "Primary signal", value: "Agentic AI Platform" },
       ],
       evidence: [
         {
@@ -143,29 +144,21 @@ export const portfolio = {
           status: "private",
           title: "Broader Platform Implementation",
           items: [
-            "Planner / Coder / Reviewer / Tester orchestration",
-            "Governance and policy gates",
-            "Auditability and execution lineage",
-            "Model routing and broader operator workflows",
-          ],
-        },
-        {
-          status: "in-progress",
-          title: "In Progress",
-          items: [
-            "MCP interoperability foundations",
-            "MCP discovery and schema handling",
-            "Authorization-aware MCP invocation foundations",
+            "LangGraph TypedDict state graphs across Planner / Coder / Reviewer / Tester",
+            "Conditional routing, durable checkpoints, graph interrupts and rollback / recovery",
+            "Sandboxed MCP JSON-RPC tool execution and schema-aware context integration",
+            "LiteLLM routing across Bedrock / Anthropic / OpenAI / Ollama with automated failover",
+            "Redis workers, Kafka event streams, OAuth2/OIDC/JWT and SSO-ready patterns",
+            "Langfuse / OpenTelemetry tracing plus Terraform, Kubernetes, Helm and AWS operations",
           ],
         },
         {
           status: "planned",
-          title: "Platform Direction",
+          title: "Next Evidence Surface",
           items: [
-            "PostgreSQL durable workflow state",
-            "Pause / persist / restart / resume",
-            "Dockerized runtime",
-            "Expanded observability",
+            "Additional SLO and autoscaling measurements",
+            "Expanded load-testing and recovery-time evidence",
+            "More public-facing implementation samples where proprietary boundaries allow",
           ],
         },
       ],
@@ -193,7 +186,7 @@ export const portfolio = {
       label: "Flagship · Regulated AI / RAG",
       role: "Grounded and traceable regulated-AI contracts",
       summary:
-        "Regulated-AI engineering showcase with public evidence for retrieval-evidence contracts, citation identity, grounded outputs, structured summaries, traceability, human-review transitions, testing, and CI. Retrieval, document-intelligence, and LLM expansion remain broader platform directions.",
+        "Regulated-AI and RAG platform with public evidence for citation, grounding, review, testing, and CI plus verified broader implementation of BM25 + PostgreSQL/pgvector hybrid retrieval, HNSW/IVFFlat indexing, query rewriting, Redis caching, reranking, Bedrock-backed generation, human review, and traced evaluation.",
       proof: [
         "Retrieval-evidence and citation contracts",
         "Grounded-answer and structured-summary contracts",
@@ -205,8 +198,9 @@ export const portfolio = {
       status: "Active flagship",
       tier: "flagship",
       metrics: [
-        { label: "Public verification", value: "8 tests + CI" },
-        { label: "Primary signal", value: "Regulated AI" },
+        { label: "Recall@10", value: "91.4%" },
+        { label: "MRR / NDCG", value: "0.86 / 0.89" },
+        { label: "Latency", value: "140 ms P50 · <420 ms P95" },
       ],
       evidence: [
         {
@@ -222,14 +216,15 @@ export const portfolio = {
           ],
         },
         {
-          status: "planned",
-          title: "Broader Platform Direction",
+          status: "private",
+          title: "Verified Broader Implementation",
           items: [
-            "Document intelligence and version-aware preparation",
-            "Dense / lexical / hybrid retrieval",
-            "Metadata filtering and reranking",
-            "Retrieval and citation evaluation",
-            "Governance and review expansion",
+            "BM25 + SentenceTransformer / PostgreSQL pgvector hybrid retrieval",
+            "HNSW / IVFFlat indexing, query rewriting and metadata filtering",
+            "Redis retrieval caching and reranking",
+            "Bedrock-backed generation and Pydantic structured outputs",
+            "Langfuse / OpenTelemetry traces across retrieval, model calls and review",
+            "1,000+ page corpus and 200 openFDA validation records",
           ],
         },
       ],
@@ -257,7 +252,7 @@ export const portfolio = {
       label: "Featured · Product Engineering",
       role: "Job intelligence and workflow product",
       summary:
-        "A product-engineering project focused on governed job ingestion, normalization, freshness, deduplication, candidate intelligence, and application workflow design.",
+        "Full-stack AI product spanning governed job ingestion, normalization, freshness, deduplication, resume/application workflows, deterministic state, and AI-assisted career intelligence. The public showcase remains recruiter-safe while the verified broader implementation adds PostgreSQL/pgvector, Redis/Kafka, LiteLLM, OAuth2/OIDC/JWT, FastAPI, Vercel/AWS and an 11-entity relational source of truth.",
       proof: [
         "Deterministic ingestion contracts",
         "Freshness and deduplication logic",
@@ -269,8 +264,9 @@ export const portfolio = {
       status: "Portfolio-ready showcase",
       tier: "featured",
       metrics: [
+        { label: "Relational model", value: "11 entities" },
         { label: "Public verification", value: "19 tests / 7 files + CI" },
-        { label: "Primary signal", value: "Product Engineering" },
+        { label: "Primary signal", value: "AI Product Engineering" },
       ],
       evidence: [
         {
@@ -289,21 +285,21 @@ export const portfolio = {
           status: "private",
           title: "Broader Product Implementation",
           items: [
-            "Next.js / React application architecture",
-            "PostgreSQL / Prisma persistence",
-            "Authentication foundations",
-            "Resume and application workflows",
-            "ATS connector architecture",
+            "Next.js / React product architecture with an 11-entity PostgreSQL / Prisma source-of-truth model",
+            "PostgreSQL/pgvector semantic matching",
+            "Redis-backed workers and Kafka event-driven ingestion",
+            "LiteLLM multi-model assistance with token / latency / cost tracing",
+            "OAuth2/OIDC/JWT identity with SSO-ready integration patterns",
+            "FastAPI services and Vercel plus AWS / Kubernetes / Helm / Terraform delivery",
           ],
         },
         {
           status: "in-progress",
           title: "Currently Strengthening",
           items: [
-            "Private-monorepo test coverage",
-            "Playwright end-to-end coverage",
-            "Retry / backoff and connector observability",
-            "Formal matching evaluation",
+            "Matching-quality benchmarks and workflow-completion evidence",
+            "Expanded load / latency and queue metrics",
+            "Additional end-to-end product evidence",
           ],
         },
       ],
@@ -464,18 +460,19 @@ export const portfolio = {
       "Reliability Engineering",
     ],
     broaderDirection: [
-      "Generative AI",
-      "LLM Applications",
-      "RAG",
-      "Hybrid Retrieval",
-      "Agentic AI",
-      "Model Routing",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "Next.js",
-      "Prisma",
-      "Authentication",
-      "Docker",
+      "LangGraph",
+      "MCP",
+      "LiteLLM",
+      "AWS Bedrock",
+      "Hybrid RAG",
+      "PostgreSQL / pgvector",
+      "Redis",
+      "Kafka",
+      "OAuth2 / OIDC / JWT",
+      "Langfuse / OpenTelemetry",
+      "Docker / Kubernetes / Helm",
+      "Terraform / AWS",
+      "Next.js / Prisma",
     ],
   },
 };
@@ -484,8 +481,8 @@ export const aboutProfile = {
   eyebrow: "ABOUT",
   title: "Applied AI engineering grounded in software systems.",
   paragraphs: [
-    "I am an Applied AI Engineer and software developer focused on building practical systems across Generative AI, LLM applications, retrieval, agentic workflows, AI platforms, backend engineering, evaluation, governance, and reliability.",
-    "My work connects AI capability with production engineering: semantic retrieval, structured outputs, human-in-the-loop controls, orchestration, APIs, service boundaries, workflow state, testing, CI, and regulated-system design.",
+    "I am an Applied AI Engineer and software developer with 3+ years of experience across enterprise and regulated software systems, progressing from Python/SQL data, search, document processing, and automation into production-oriented Applied AI.",
+    "My current work spans LangGraph/MCP orchestration, governed RAG, async FastAPI services, PostgreSQL/pgvector, Redis/Kafka runtimes, model routing, identity/security controls, observability, cloud infrastructure, evaluation, and recovery-oriented system design.",
   ],
   facts: [
     { label: "Primary", value: "Applied AI Engineering" },
@@ -502,11 +499,11 @@ export const professionalExperience = [
     period: "June 2026 — Present",
     location: "United States · Remote",
     summary:
-      "Independent Applied AI and software-engineering work conducted through SPACTR AI Labs LLC, focused on building and strengthening production-oriented AI systems across agentic AI, regulated AI, governed retrieval, product engineering, backend systems, evaluation, governance, and reliability.",
+      "Independent Applied AI engineering across agentic orchestration, regulated RAG, AI backends, full-stack AI products, evaluation/observability, cloud infrastructure, workflow reliability, and cross-project platform architecture.",
     highlights: [
-      "Architected governed agentic-AI workflows with role routing, human approvals, controlled execution, evaluation, and broader private multi-agent orchestration.",
-      "Developed evidence-centered regulated-AI, retrieval, product, backend, and workflow-reliability systems with explicit public/private/planned evidence boundaries.",
-      "Built automated testing and CI across agent behavior, retrieval, service contracts, workflow state transitions, and regression behavior.",
+      "Architected LangGraph typed-state workflows across Planner, Coder, Reviewer, and Tester roles with checkpoints, interrupt-based approvals, sandboxed execution, rollback/recovery, and 94.8% benchmark task completion while preserving 3,950+ regression tests.",
+      "Upgraded PharmaAI to BM25 + PostgreSQL/pgvector hybrid retrieval with HNSW/IVFFlat, reranking, Redis caching and traced evaluation, reaching 91.4% Recall@10, 0.86 MRR, 0.89 NDCG, 140 ms P50 retrieval and <420 ms P95 end-to-end latency.",
+      "Built production-oriented backend/platform capabilities with async FastAPI, SSE/WebSockets, MCP, LiteLLM, Redis/Kafka, OAuth2/OIDC/JWT, Langfuse/OpenTelemetry, Terraform, Kubernetes/Helm, AWS and GitHub Actions.",
     ],
     skills: [
       "Python",
