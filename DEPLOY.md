@@ -1,14 +1,14 @@
-# Deploy V1
+# Portfolio Deployment
 
-## 1. Create the local project
+The `main` branch of this repository is the production source for the recruiter-facing portfolio.
 
-Recommended location:
+Production URL:
 
-```bash
-~/Projects/Careers/Portfolio
+```text
+https://chaitanya-sai-portfolio.vercel.app
 ```
 
-## 2. Install and verify
+## Local Verification
 
 ```bash
 npm install
@@ -16,59 +16,54 @@ npm run typecheck
 npm run build
 ```
 
-## 3. Create a fresh Git repository
+## Vercel Configuration
 
-```bash
-git init
-git add .
-git commit -m "Create Applied AI portfolio V1"
-git branch -M main
-```
-
-## 4. Create/push the new GitHub repository
-
-Recommended repository:
+The project is deployed from:
 
 ```text
 chaitanyaAI-careers/Portfolio
 ```
 
-Using GitHub CLI:
-
-```bash
-gh repo create chaitanyaAI-careers/Portfolio \
-  --public \
-  --source=. \
-  --remote=origin \
-  --push
-```
-
-## 5. Vercel
-
-Import the new `Portfolio` repository into Vercel.
-
-Environment variable:
+Recommended environment variable:
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://<your-final-vercel-url>
+NEXT_PUBLIC_SITE_URL=https://chaitanya-sai-portfolio.vercel.app
 ```
 
-Redeploy after setting the final URL.
+## Release Checklist
 
-## 6. After deployment
+After changes to `main`, verify:
 
-Verify:
-- home page
-- mobile layout
-- all six GitHub links
-- LinkedIn
-- email
+- home page renders without errors
+- mobile and desktop layouts
+- GitHub project links
+- LinkedIn and email links
+- evidence labels remain accurate
+- Agentic AI and PharmaAI architecture diagrams match current evidence status
 - Open Graph image
 - `/robots.txt`
 - `/sitemap.xml`
 
-Then use the final portfolio URL in:
-- GitHub profile
-- LinkedIn Featured / Contact
-- resume header
-- individual README footers
+## Content Authority
+
+Primary recruiter-facing content lives in:
+
+```text
+data/portfolio.ts
+```
+
+Presentation and page-level copy live in:
+
+```text
+app/page.tsx
+app/layout.tsx
+app/opengraph-image.tsx
+```
+
+Architecture visuals live in:
+
+```text
+public/architecture/
+```
+
+The public resume CTA remains disabled unless a specific recruiter-facing resume is intentionally published. The private master resume is not meant to be exposed directly through the portfolio.
