@@ -175,7 +175,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="availability">
             <span />
-            Open to full-time Applied AI · Generative AI · AI Platform roles
+            Open to Applied AI · Generative AI · Agentic AI · RAG · AI Platform roles
           </p>
 
           <p className="eyebrow">Applied AI Engineer</p>
@@ -223,7 +223,7 @@ export default function Home() {
 
             <div>
               <strong>{portfolio.headline}</strong>
-              <small>Applied systems · governed AI · backend engineering</small>
+              <small>Applied systems · Agentic AI · RAG · backend engineering</small>
             </div>
           </div>
 
@@ -235,7 +235,7 @@ export default function Home() {
 
             <div className="signal-row">
               <span className="signal-label">Focus</span>
-              <strong>GenAI · RAG · Agents</strong>
+              <strong>GenAI · Agentic AI · RAG</strong>
             </div>
 
             <div className="signal-row">
@@ -519,7 +519,7 @@ export default function Home() {
 
       <footer className="footer shell">
         <span>© 2026 {portfolio.name}</span>
-        <span>Applied AI · LLM Applications · RAG · Agentic AI · AI Platforms</span>
+        <span>Applied AI · Generative AI · LLM Applications · Agentic AI · RAG · AI Platforms</span>
       </footer>
     </main>
   );
