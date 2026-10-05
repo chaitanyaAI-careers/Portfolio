@@ -2,7 +2,7 @@
 
 Production recruiter-facing portfolio for:
 
-**Applied AI Engineering · Generative AI · LLM Applications · RAG · Agentic AI · AI Platform & Backend Engineering**
+**Applied AI Engineering · Generative AI · LLM Applications · Agentic AI · RAG · AI Platform & Backend · AI Product Engineering**
 
 Live portfolio:
 
@@ -22,17 +22,17 @@ Implemented public evidence, broader private implementation, active development,
 
 Flagship agentic-AI and AI-platform project demonstrating public evidence for role routing, approval/risk controls, controlled-execution boundaries, provider abstraction, deterministic evaluation, testing, and CI.
 
-The portfolio also presents broader private implementation, MCP discovery and governance foundations, and planned durable-workflow/observability architecture with explicit evidence labels.
+The portfolio also presents the verified broader private implementation: LangGraph typed-state orchestration, MCP interoperability, durable PostgreSQL workflow state, LiteLLM routing, Redis/Kafka execution infrastructure, identity controls, observability, and cloud deployment patterns, with explicit evidence labels.
 
 ### Pharma AI Platform
 
 Flagship regulated-AI project demonstrating public evidence for retrieval-evidence contracts, citation identity, grounded outputs, structured summaries, traceability, human-review transitions, testing, and CI.
 
-Broader retrieval and document-intelligence capabilities are explicitly labeled as platform direction.
+The verified broader implementation includes BM25 + PostgreSQL/pgvector hybrid retrieval, HNSW/IVFFlat indexing, query rewriting, metadata filtering, Redis caching, reranking, Bedrock-backed generation, human review, observability, and measured retrieval benchmarks.
 
 ## Supporting Engineering
 
-- **Job Copilot** — AI-assisted product and full-stack engineering
+- **Job Copilot** — full-stack AI product engineering with a verified 11-entity relational model and broader pgvector / Redis / Kafka / LiteLLM implementation
 - **HR AI Content System** — governed retrieval and evaluation
 - **Medicine Verification Platform** — backend/API engineering
 - **Nudge** — workflow reliability and systems engineering
