@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Chaitanya Sai | Applied AI Engineer",
   description:
-    "Applied AI engineering portfolio focused on Generative AI, LLM Applications, RAG, Agentic AI, AI Platform Engineering, backend engineering and reliable AI systems.",
+    "Applied AI engineering portfolio spanning Generative AI and LLM applications, Agentic AI, RAG and retrieval, AI Platform and Backend Engineering, AI Product Engineering, evaluation, governance and reliable AI systems.",
   keywords: [
     "Applied AI Engineer",
     "Generative AI Engineer",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Chaitanya Sai | Applied AI Engineer",
     description:
-      "Generative AI · LLM Applications · RAG · Agentic AI · AI Platform & Backend Engineering",
+      "Generative AI · LLM Applications · Agentic AI · RAG & Retrieval · AI Platform & Backend Engineering",
     type: "website",
     url: siteUrl,
     siteName: "Chaitanya Sai — Applied AI Engineering Portfolio",
