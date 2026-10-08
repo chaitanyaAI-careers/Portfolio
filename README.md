@@ -2,7 +2,7 @@
 
 Production recruiter-facing portfolio for:
 
-**Applied AI Engineering · Generative AI · LLM Applications · Agentic AI · RAG · AI Platform & Backend · AI Product Engineering**
+**Applied AI Engineering · Generative AI / LLM Applications · Agentic AI · RAG / Retrieval · AI Platform & Backend · AI Product Engineering · AI Solutions / Evaluation**
 
 Live portfolio:
 
@@ -34,7 +34,7 @@ The verified broader implementation includes BM25 + PostgreSQL/pgvector hybrid r
 
 - **Job Copilot** — full-stack AI product engineering with a verified 11-entity relational model and broader pgvector / Redis / Kafka / LiteLLM implementation
 - **HR AI Content System** — governed retrieval and evaluation
-- **Medicine Verification Platform** — backend/API engineering
+- **Medicine Verification Service** — backend/API engineering with explicit matched / not-found / ambiguous outcomes
 - **Nudge** — workflow reliability and systems engineering
 
 ## Visual System
