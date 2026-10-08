@@ -114,7 +114,7 @@ data/portfolio.ts
 
 ## Resume
 
-A public resume CTA is intentionally disabled until the application-resume strategy is finalized.
+Resume strategy is finalized: the private Master Resume remains the evidence source of truth, while the Standard Resume is the default public/application baseline and is tailored further for specific job descriptions when needed.
 
 ## Connect
 
