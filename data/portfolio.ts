@@ -55,7 +55,7 @@ export const portfolio = {
   email: "chaitanya.careerpaths@gmail.com",
   intro:
     "I’m a software engineer with 3+ years across enterprise and regulated pharmaceutical systems, now focused on Applied AI. I build LLM, retrieval, agentic, and backend systems around explicit state, authorization, evaluation, observability, and recovery.",
-  resumeUrl: "",
+  resumeUrl: "https://drive.google.com/file/d/1XJX5N0NqeB1QlbhFZJ47zDXUwkgEcnaW/view?usp=drivesdk",
   links: {
     github: "https://github.com/chaitanyaAI-careers",
     linkedin: "https://www.linkedin.com/in/chaitanyaai-careers/",
