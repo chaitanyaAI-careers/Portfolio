@@ -50,11 +50,11 @@ export const portfolio = {
   name: "Chaitanya Sai",
   headline: "Applied AI Engineer",
   positioning:
-    "Agentic AI · RAG · AI Platform & Backend · AI Product Engineering",
+    "Generative AI & LLM Applications · Agentic AI · RAG & Retrieval · AI Platform & Backend · AI Product Engineering",
   location: "Texas, USA · Open to Remote & Relocation",
   email: "chaitanya.careerpaths@gmail.com",
   intro:
-    "I build production-oriented Applied AI systems across agentic orchestration, hybrid retrieval, AI backends, full-stack AI products, evaluation, governance, observability, reliability, and regulated software.",
+    "I’m a software engineer with 3+ years across enterprise and regulated pharmaceutical systems, now focused on Applied AI. I build LLM, retrieval, agentic, and backend systems around explicit state, authorization, evaluation, observability, and recovery.",
   resumeUrl: "",
   links: {
     github: "https://github.com/chaitanyaAI-careers",
@@ -89,20 +89,20 @@ export const portfolio = {
   ],
   focus: [
     {
-      title: "Applied AI",
-      text: "LLM applications, retrieval systems, structured outputs, grounded workflows, evaluation, and human oversight.",
+      title: "Applied AI & LLM Applications",
+      text: "LLM applications, structured outputs, full-stack AI products, model routing, evaluation, and grounded workflows.",
     },
     {
-      title: "AI Platforms",
-      text: "Orchestration, policy gates, tool integration, workflow state, auditability, model routing, and operational controls.",
+      title: "Agentic AI",
+      text: "LangGraph and MCP workflows with explicit state, policy gates, human approval, controlled tool execution, checkpoints, and recovery.",
     },
     {
-      title: "Architecture & Reliability",
-      text: "Service boundaries, data flows, persistence, authorization, workflow reliability, and deployment architecture.",
+      title: "RAG & Retrieval",
+      text: "Hybrid BM25 + pgvector retrieval, reranking, citations, versioned evaluation, and measurable retrieval quality.",
     },
     {
-      title: "Backend Engineering",
-      text: "Python, FastAPI, TypeScript, PostgreSQL-oriented systems, REST APIs, Docker, tests, and production-minded service design.",
+      title: "AI Platform & Backend",
+      text: "Python/FastAPI services, PostgreSQL, Redis/Kafka runtimes, identity, observability, cloud delivery, and reliability engineering.",
     },
   ],
   projects: [
@@ -111,7 +111,7 @@ export const portfolio = {
       label: "Flagship · Agentic AI / AI Platform",
       role: "Governed agent orchestration and controlled execution",
       summary:
-        "Flagship agentic AI and AI-platform system. The public showcase demonstrates role routing, approvals, controlled execution, deterministic evaluation, testing, and CI; the verified broader implementation adds LangGraph typed-state orchestration, MCP, durable checkpoints, LiteLLM routing, Redis/Kafka runtimes, identity controls, observability, and cloud deployment.",
+        "Built around one rule: planning is not authorization. The platform separates agent proposals from permission to execute, using policy checks, human approval, controlled MCP tool paths, durable checkpoints, rollback, evaluation, and auditability across a broader LangGraph-based runtime.",
       proof: [
         "Role routing and approval / risk controls",
         "Controlled-execution boundaries",
@@ -164,7 +164,7 @@ export const portfolio = {
       ],
       caseStudy: {
         problem:
-          "How can multi-agent systems execute useful work while preserving explicit authorization, human control, evaluation, and operational boundaries?",
+          "How can AI agents do useful software work without letting model output become execution authority?",
         architecture: [
           "Request / task intake",
           "Role routing and orchestration",
@@ -186,7 +186,7 @@ export const portfolio = {
       label: "Flagship · Regulated AI / RAG",
       role: "Grounded and traceable regulated-AI contracts",
       summary:
-        "Regulated-AI and RAG platform with public evidence for citation, grounding, review, testing, and CI plus verified broader implementation of BM25 + PostgreSQL/pgvector hybrid retrieval, HNSW/IVFFlat indexing, query rewriting, Redis caching, reranking, Bedrock-backed generation, human review, and traced evaluation.",
+        "Reworked after dense similarity repeatedly returned passages that were related to a regulatory question but were not the evidence needed to answer it. The current design combines BM25 + PostgreSQL/pgvector hybrid retrieval, reranking, citations, review, and traced evaluation.",
       proof: [
         "Retrieval-evidence and citation contracts",
         "Grounded-answer and structured-summary contracts",
@@ -230,7 +230,7 @@ export const portfolio = {
       ],
       caseStudy: {
         problem:
-          "How should regulated document-intelligence systems represent evidence, grounded outputs, review state, and traceability before adding more complex retrieval and LLM layers?",
+          "How do you retrieve the evidence that actually answers a regulatory question, then keep generation tied to that evidence through citations, review, and evaluation?",
         architecture: [
           "Document / evidence inputs",
           "Evidence and citation contracts",
@@ -252,7 +252,7 @@ export const portfolio = {
       label: "Featured · Product Engineering",
       role: "Job intelligence and workflow product",
       summary:
-        "Full-stack AI product spanning governed job ingestion, normalization, freshness, deduplication, resume/application workflows, deterministic state, and AI-assisted career intelligence. The public showcase remains recruiter-safe while the verified broader implementation adds PostgreSQL/pgvector, Redis/Kafka, LiteLLM, OAuth2/OIDC/JWT, FastAPI, Vercel/AWS and an 11-entity relational source of truth.",
+        "Built on the rule that AI can assist the workflow without becoming the source of truth. An 11-entity relational model and deterministic rules own freshness, deduplication, permissions, and application state, while pgvector and LLM services assist matching and preparation.",
       proof: [
         "Deterministic ingestion contracts",
         "Freshness and deduplication logic",
@@ -309,7 +309,7 @@ export const portfolio = {
       label: "Supporting · Responsible AI / Evaluation",
       role: "Governed enterprise retrieval",
       summary:
-        "Governed enterprise-retrieval project implementing SentenceTransformer embeddings, semantic search, deterministic PII redaction, role-conditioned governance, grounded extractive answers, and evaluation.",
+        "Explores a simple but important boundary: a result can be relevant and still be the wrong information to show a requester. The system combines semantic retrieval with deterministic PII controls, role-conditioned behavior, grounded answers, and repeatable evaluation.",
       proof: [
         "SentenceTransformer embeddings and scikit-learn cosine-similarity retrieval",
         "Deterministic PII / sensitive-term redaction",
@@ -350,11 +350,11 @@ export const portfolio = {
       ],
     },
     {
-      name: "Medicine Verification Platform",
+      name: "Medicine Verification Service",
       label: "Supporting · Backend Engineering",
       role: "Typed backend API and service architecture",
       summary:
-        "Backend/API engineering showcase implementing FastAPI, Pydantic contracts, service and repository boundaries, synthetic regulatory-source adapters, structured verification outcomes, health checks, testing, and CI.",
+        "Started from a deliberately narrower claim: finding a regulatory record does not prove a physical medicine is authentic. The service returns matched, not found, or ambiguous through typed FastAPI/Pydantic contracts and explicit service/source/repository boundaries.",
       proof: [
         "FastAPI health and verification endpoints",
         "Pydantic request / response validation",
@@ -399,7 +399,7 @@ export const portfolio = {
       label: "Supporting · Reliability / Workflow Systems",
       role: "Workflow contracts and reliability-oriented state management",
       summary:
-        "Systems-engineering showcase implementing scheduled-work contracts, queue eligibility, idempotency requirements, explicit lifecycle states, controlled transitions, delivery outcomes, testing, and CI.",
+        "Models workflow reliability before infrastructure is added: explicit PENDING, QUEUED, COMPLETED, and FAILED states, idempotency requirements, queue eligibility, controlled transitions, and structured delivery outcomes.",
       proof: [
         "Pending → queued → completed / failed lifecycle",
         "Queue eligibility and idempotency-key validation",
@@ -479,10 +479,10 @@ export const portfolio = {
 
 export const aboutProfile = {
   eyebrow: "ABOUT",
-  title: "Applied AI engineering grounded in software systems.",
+  title: "Applied AI engineering built on a software-systems foundation.",
   paragraphs: [
-    "I am an Applied AI Engineer and software developer with 3+ years of experience across enterprise and regulated software systems, progressing from Python/SQL data, search, document processing, and automation into production-oriented Applied AI.",
-    "My current work spans LangGraph/MCP orchestration, governed RAG, async FastAPI services, PostgreSQL/pgvector, Redis/Kafka runtimes, model routing, identity/security controls, observability, cloud infrastructure, evaluation, and recovery-oriented system design.",
+    "I’m a software engineer with 3+ years across enterprise and regulated pharmaceutical systems. I started with Python/SQL data workflows, enterprise search, document processing, ETL, testing, and automation before moving into LLM applications, retrieval, agentic systems, and AI backends.",
+    "The problems I care about are usually around the model rather than just the model itself: what is allowed to execute, what state is authoritative, whether retrieval can be measured, how evidence stays traceable, and how a system behaves when a provider, workflow, or deployment fails.",
   ],
   facts: [
     { label: "Primary", value: "Applied AI Engineering" },
@@ -499,11 +499,11 @@ export const professionalExperience = [
     period: "June 2026 — Present",
     location: "United States · Remote",
     summary:
-      "Independent Applied AI engineering across agentic orchestration, regulated RAG, AI backends, full-stack AI products, evaluation/observability, cloud infrastructure, workflow reliability, and cross-project platform architecture.",
+      "Independent engineering across connected Applied AI systems spanning agentic workflows, regulated RAG, AI backends, and full-stack AI products.",
     highlights: [
-      "Architected LangGraph typed-state workflows across Planner, Coder, Reviewer, and Tester roles with checkpoints, interrupt-based approvals, sandboxed execution, rollback/recovery, and 94.8% benchmark task completion while preserving 3,950+ regression tests.",
-      "Upgraded PharmaAI to BM25 + PostgreSQL/pgvector hybrid retrieval with HNSW/IVFFlat, reranking, Redis caching and traced evaluation, reaching 91.4% Recall@10, 0.86 MRR, 0.89 NDCG, 140 ms P50 retrieval and <420 ms P95 end-to-end latency.",
-      "Built production-oriented backend/platform capabilities with async FastAPI, SSE/WebSockets, MCP, LiteLLM, Redis/Kafka, OAuth2/OIDC/JWT, Langfuse/OpenTelemetry, Terraform, Kubernetes/Helm, AWS and GitHub Actions.",
+      "Separated agent planning from execution authority in a LangGraph PRD-to-software platform, with policy checks, approval gates, controlled MCP tool paths, recoverable checkpoints, 94.8% task completion, and 3,950+ regression tests.",
+      "Reworked pharmaceutical retrieval after dense similarity returned related but weak evidence; hybrid BM25 + PostgreSQL/pgvector retrieval, query rewriting, and reranking reached 91.4% Recall@10, 0.86 MRR, and 0.89 NDCG across a 1,000+ page corpus.",
+      "Standardized shared backend/platform concerns across projects with async FastAPI, Redis/Kafka, OAuth2/OIDC/JWT, LiteLLM, Langfuse/OpenTelemetry, Terraform, Kubernetes/Helm, AWS, and GitHub Actions.",
     ],
     skills: [
       "Python",
@@ -521,11 +521,11 @@ export const professionalExperience = [
     period: "February 2026 — May 2026",
     location: "Sacramento, California · Remote",
     summary:
-      "Developed Python backend, document-processing, and AI-assisted workflows for enterprise and pharmaceutical software environments.",
+      "Worked on Python/FastAPI backends and AI-assisted document workflows for enterprise and pharmaceutical software.",
     highlights: [
-      "Built FastAPI services for document ingestion, structured extraction, retrieval, transformation, and downstream application workflows.",
-      "Applied chunking, embeddings, semantic search, metadata filtering, structured outputs, PostgreSQL/vector search, and LLM integrations.",
-      "Supported testing, debugging, integrations, deployment workflows, and regulated document and compliance-oriented systems.",
+      "Took documents from ingestion and structured extraction through chunking, embeddings, semantic retrieval, transformation, and downstream application integration.",
+      "Integrated LLM APIs with PostgreSQL/vector search behind typed REST contracts and Pydantic validation so model output entered downstream systems as structured application data.",
+      "Shipped and supported services through Docker, AWS, and CI/CD while translating regulated requirements around traceability, access control, and auditability into implementation work.",
     ],
     skills: [
       "Python",
@@ -543,11 +543,11 @@ export const professionalExperience = [
     period: "June 2020 — July 2023",
     location: "Visakhapatnam, India",
     summary:
-      "Worked across enterprise software and regulated pharmaceutical data workflows using Python, SQL, relational systems, ETL, testing, and technical documentation.",
+      "Worked across Python, SQL, enterprise search, document processing, data workflows, automation, and regulated pharmaceutical systems.",
     highlights: [
-      "Built Python and SQL validation, transformation, ETL, migration, and reporting workflows for enterprise datasets.",
-      "Contributed to QMS, CAPA, deviations, change control, controlled documentation, RBAC, audit trails, traceability, and data-integrity workflows.",
-      "Supported system analysis, integrations, testing, debugging, migration, deployment, and validation-oriented engineering activities.",
+      "Created Python/SQL workflows for ETL, migration, reconciliation, validation, transformation, and reporting across regulated-business systems.",
+      "Built document-processing and enterprise-search workflows around metadata normalization, controlled records, versioning, approvals, RBAC, audit trails, and secure information access.",
+      "Designed relational data models and data-quality controls while supporting testing, integrations, deployment, legacy modernization, and QMS/CAPA/deviation/change-control workflows.",
     ],
     skills: [
       "Python",
